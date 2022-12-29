@@ -5,14 +5,15 @@ import ExpenseItem from './Components/ExpenseItem';
 function App() {
 
   const arr = [
-    { nation: 'Argentina', club: 'PSG', name: 'L.Messi' },
-    { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' }
+    { nation: 'Argentina', club: 'PSG', name: 'L.Messi' ,prev:'FC Barcelona'},
+    { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'}
   ];
 
 
   return (
     <div>
-      <ExpenseItem nation={arr[0].nation} club={arr[0].club} name={arr[0].name} />
+      <ExpenseItem param={arr[0]} />
+      <ExpenseItem param={arr[1]} />
     </div>
   );
 }

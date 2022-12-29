@@ -1,14 +1,25 @@
 import './ExpenseItem.css'
-
-
+import React, { useState } from 'react';
 function ExpenseItem(props) {
+
+
+    const [club, setClub] = useState(props.param.club);
+
+    const clickhandler = () => {
+        setClub(props.param.prev);
+        console.log('clicked');
+    }
+
     return (
         <div className="expense-item">
-            <div>{props.nation}</div>
+            <div>{props.param.nation}</div>
             <div className="expense-item__description">
-                <h2>{props.club}</h2>
+                <h2>{club}</h2>
             </div>
-            <div className="expense-item__price">{props.name}</div>
+
+            <button onClick={clickhandler}> previous team </button>
+            <div className="expense-item__price">{props.param.name}</div>
+
         </div>
     );
 }
