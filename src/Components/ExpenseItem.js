@@ -1,14 +1,14 @@
 import './ExpenseItem.css'
 
 
-function ExpenseItem() {
+function ExpenseItem(props) {
     return (
         <div className="expense-item">
-            <div>December 18</div>
+            <div>{props.nation}</div>
             <div className="expense-item__description">
-                <h2>Argentina WC champions</h2>
+                <h2>{props.club}</h2>
             </div>
-            <div className="expense-item__price">Lionel Messi</div>
+            <div className="expense-item__price">{props.name}</div>
         </div>
     );
 }
