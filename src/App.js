@@ -5,7 +5,7 @@ import ExpenseItem from './Components/ExpenseItem';
 function App() {
 
   const arr = [
-    { nation: 'Argentina', club: 'PSG', name: 'L.Messi' ,prev:'FC Barcelona'},
+    { nation: 'Argentina', club: 'FC Barcelona', name: 'L.Messi' ,prev:'NOB'},
     { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'}
   ];
 
