@@ -6,7 +6,8 @@ function App() {
 
   const arr = [
     { nation: 'Argentina', club: 'FC Barcelona', name: 'L.Messi' ,prev:'NOB'},
-    { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'}
+    { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'},
+    { nation: 'Spain', club: 'FC Barcelona', name: 'Gavi' , prev:'La Masia'},
   ];
 
 
