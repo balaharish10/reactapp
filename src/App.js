@@ -1,7 +1,7 @@
 
 import './App.css';
-import ExpenseItem from './Components/ExpenseItem';
-
+import ExpenseItem from './Components/ExpenseItem/ExpenseItem';
+import NewExpense from './Components/NewExpense/NewExpense';
 function App() {
 
   const arr = [
@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <NewExpense/>
       <ExpenseItem param={arr[0]} />
       <ExpenseItem param={arr[1]} />
     </div>
