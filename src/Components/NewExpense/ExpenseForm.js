@@ -5,46 +5,67 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
 
-  const [userInput,setUserInput]= useState({
-    name:'',
-    nation: '',
-    prev: '',
-    club: '',
-  });
+  // const [userInput,setUserInput]= useState({
+  //   name:'',
+  //   nation: '',
+  //   prev: '',
+  //   club: '',
+  // });
+  const [name,setName]=useState('');
+  const [nation,setNation]=useState('');
+  const [prev,setPrev]=useState('');
+  const [club,setClub]=useState('');
 
   const namechangehandler = (event) => {
-setUserInput(
-  {
-    name : event.target.value,
-  ...userInput
-});
+    setName(event.target.value);
+// setUserInput(
+//   {
+//     name : event.target.value,
+//   ...userInput
+// });
   };
 
   const clubchangehandler = (event) => {
-    setUserInput(
-      {
-        club : event.target.value,
-      ...userInput
-    });
+    setClub(event.target.value);
+    // setUserInput(
+    //   {
+    //     club : event.target.value,
+    //   ...userInput
+    // });
       };
 
       const prevchangehandler = (event) => {
-        setUserInput(
-          {
-            prev : event.target.value,
-          ...userInput
-        });
+        setPrev(event.target.value);
+        // setUserInput(
+        //   {
+        //     prev : event.target.value,
+        //   ...userInput
+        // });
           };
 
           const nationchangehandler = (event) => {
-            setUserInput(
-              {
-                nation : event.target.value,
-              ...userInput
-            });
+            setNation(event.target.value);
+            // setUserInput(
+            //   {
+            //     nation : event.target.value,
+            //   ...userInput
+            // });
               };
 
-return <form>
+          const onSubmithandler= (event) => {
+            event.preventDefault();
+            const data={
+              name : name,
+              club : club,
+              nation : nation,
+              prev : prev
+            };
+            console.log (data);
+  
+          };
+
+
+return <form onSubmit={onSubmithandler}>
     <div className='new-expense__controls '> 
     <div className='new-new-expense__control label'>
         <label>Player Name</label>
