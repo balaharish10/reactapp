@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
   // const [userInput,setUserInput]= useState({
   //   name:'',
@@ -60,8 +60,11 @@ const ExpenseForm = () => {
               nation : nation,
               prev : prev
             };
-            console.log (data);
-  
+            props.onSavedata(data);
+            setName('');
+            setClub('');
+            setPrev('');
+            setNation('');
           };
 
 
@@ -69,19 +72,27 @@ return <form onSubmit={onSubmithandler}>
     <div className='new-expense__controls '> 
     <div className='new-new-expense__control label'>
         <label>Player Name</label>
-        <input type='text' onChange={namechangehandler}/>
+        <input type='text' 
+        value={name}
+        onChange={namechangehandler}/>
         </div>
         <div className='new-new-expense__control label'>
         <label>club</label>
-        <input type='text' onChange={clubchangehandler}/>
+        <input type='text' 
+        value={club}
+        onChange={clubchangehandler}/>
         </div>
         <div className='new-new-expense__control label'>
         <label>previous club</label>
-        <input type='text' onChange={prevchangehandler}/>
+        <input type='text' 
+        value={prev}
+        onChange={prevchangehandler}/>
         </div>
         <div className='new-new-expense__control label'>
         <label>nationality</label>
-        <input type='text' onChange={nationchangehandler}/>
+        <input type='text' 
+        value={nation}
+        onChange={nationchangehandler}/>
         </div>
     </div>
     <div className='new-expense__actions'> 

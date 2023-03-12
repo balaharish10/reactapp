@@ -10,10 +10,13 @@ function App() {
     { nation: 'Spain', club: 'FC Barcelona', name: 'Gavi' , prev:'La Masia'},
   ];
 
+  const newExpensehandler = expense => {
+    console.log(expense);
+  };
 
   return (
     <div>
-      <NewExpense/>
+      <NewExpense getExpense= {newExpensehandler}/>
       <ExpenseItem param={arr[0]} />
       <ExpenseItem param={arr[1]} />
     </div>
