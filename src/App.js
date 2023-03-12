@@ -3,16 +3,23 @@ import './App.css';
 //import ExpenseItem from './Components/ExpenseItem/ExpenseItem';
 import Expenses from './Components/Expenses/Expenses'
 import NewExpense from './Components/NewExpense/NewExpense';
+import { useState } from 'react';
+
+const ini_arr = [
+  { id: 1,nation: 'Argentina', club: 'FC Barcelona', name: 'L.Messi' ,prev:'NOB'},
+  { id: 2,nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'},
+  { id: 3,nation: 'Spain', club: 'FC Barcelona', name: 'Gavi' , prev:'La Masia'},
+];
+
 function App() {
 
-  const arr = [
-    { nation: 'Argentina', club: 'FC Barcelona', name: 'L.Messi' ,prev:'NOB'},
-    { nation: 'Spain', club: 'FC Barcelona', name: 'Pedri' , prev:'Las Palmas'},
-    { nation: 'Spain', club: 'FC Barcelona', name: 'Gavi' , prev:'La Masia'},
-  ];
+const [arr,setArr]=useState(ini_arr);
 
   const newExpensehandler = expense => {
-    console.log(expense);
+setArr((prev)=> {
+  return [expense,...prev];
+});
+    
   };
 
   return (
