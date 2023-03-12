@@ -1,6 +1,7 @@
 
 import './App.css';
-import ExpenseItem from './Components/ExpenseItem/ExpenseItem';
+//import ExpenseItem from './Components/ExpenseItem/ExpenseItem';
+import Expenses from './Components/Expenses/Expenses'
 import NewExpense from './Components/NewExpense/NewExpense';
 function App() {
 
@@ -17,8 +18,7 @@ function App() {
   return (
     <div>
       <NewExpense getExpense= {newExpensehandler}/>
-      <ExpenseItem param={arr[0]} />
-      <ExpenseItem param={arr[1]} />
+      <Expenses items = {arr}/>
     </div>
   );
 }
