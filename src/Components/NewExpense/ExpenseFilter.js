@@ -14,7 +14,7 @@ props.data(event.target.value);
       <div className='expenses-filter__control'>
         <label>Filter by Club</label>
         <select value={props.selected} onChange={onSelecthandler}>
-          <option value='Barca'>Barca</option>
+          <option value='FC Barcelona'>FC Barcelona</option>
           <option value='Real'>Real</option>
           <option value='Bayern'>Bayern</option>
           <option value='Arsenal'>Arsenal</option>

@@ -9,17 +9,26 @@ const Expenses = (props) => {
 
 
   const [filterClub, setfilterClub] = useState('Arsenal');
+
   const filterdatahandler = (value) => {
     setfilterClub(value);
     console.log(value);
   };
+
+
+
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.club === filterClub;
+  });
+
+
 
   return (
     <div>
       <ExpenseFilter selected={filterClub} data={filterdatahandler} />
       <Card className="expenses">
 
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
         <ExpenseItem 
         key ={expense.id}
         name={expense.name} 
